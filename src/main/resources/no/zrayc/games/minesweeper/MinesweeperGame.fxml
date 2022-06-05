@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.zrayc.games.minesweeper.MinesweeperApp">
+   <top>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" />
+            <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Button fx:id="optionsButton" mnemonicParsing="false">
+         </Button>
+         <Button id="newGameButton" mnemonicParsing="false" onMouseClicked="#newGame" text="New game" GridPane.columnIndex="1">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         </Button>
+         <HBox alignment="CENTER" GridPane.columnIndex="2">
+            <GridPane.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </GridPane.margin>
+            <ImageView fx:id="bombIcon" fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+               <Image url="@images/Flag@3x.png" />
+            </ImageView>
+            <StackPane>
+               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="32.0" stroke="#505050" strokeType="INSIDE"
+                          width="64.0"/>
+               <Text fx:id="bombAmountDisplay" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER"/>
+            </StackPane>
+         </HBox>
+      </GridPane>
+   </top>
+</BorderPane>
