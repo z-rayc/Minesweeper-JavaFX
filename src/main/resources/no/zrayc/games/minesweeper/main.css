@@ -1,0 +1,36 @@
+#root {
+    -fx-background-color: #efefef;
+}
+
+#optionsButton {
+    -fx-graphic: url(images/Gear@2x.png);
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-focus-traversable: false;
+}
+
+#optionsButton:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 3, 0, 0, 0);
+}
+
+#optionsButton:focused {
+    -fx-effect: dropshadow(three-pass-box, rgba(3, 158, 211, 1), 5, 0, 0, 0);
+}
+
+#newGameButton {
+    -fx-focus-traversable: false;
+    -fx-cursor: hand;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    -fx-border-color: Lightgrey;
+    -fx-padding: 5 10;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 14;
+}
+
+#bombAmountDisplay {
+    -fx-font-family: "Verdana";
+    -fx-font-weight: 700;
+    -fx-font-size: 16;
+    -fx-fill: Darkred;
+}
