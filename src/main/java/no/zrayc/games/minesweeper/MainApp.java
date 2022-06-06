@@ -21,13 +21,12 @@ public class MainApp extends Application {
             
             FXMLLoader loader = new FXMLLoader(getClass().getResource("MinesweeperGame.fxml"));
             Parent startScene = loader.load();
-            MinesweeperApp minesweeperApp = loader.getController();
-            minesweeperApp.setApplication(this);
+            MinesweeperGameController minesweeperGameController = loader.getController();
             
             scene = new Scene(startScene);
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("main.css")).toExternalForm());
-            minesweeperApp.newGame();
-            minesweeperApp.init();
+            minesweeperGameController.newGame();
+            minesweeperGameController.init();
             
             stage.setScene(scene);
             stage.show();
@@ -35,9 +34,9 @@ public class MainApp extends Application {
             stage.getIcons().add(new Image(Objects.requireNonNull(
                     getClass().getResourceAsStream("images/Bomb@3x.png"))));
             stage.setTitle("Minesweeper");
-            stage.setOnCloseRequest(MinesweeperApp::exitApplication);
+            stage.setOnCloseRequest(MinesweeperGameController::exitApplication);
         } catch (Exception e) {
-            MinesweeperApp.getErrorAlert(e, "The program failed to open. ");
+            MinesweeperGameController.getErrorAlert(e, "The program failed to open. ");
             Platform.exit();
         }
     }
