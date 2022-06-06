@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.zrayc.games.minesweeper.MinesweeperApp">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.zrayc.games.minesweeper.MinesweeperGameController">
    <top>
       <GridPane>
          <columnConstraints>
@@ -24,7 +24,7 @@
          <rowConstraints>
             <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
          </rowConstraints>
-         <Button fx:id="optionsButton" mnemonicParsing="false">
+         <Button fx:id="optionsButton" onMouseClicked="#openOptionsMenu" mnemonicParsing="false">
          </Button>
          <Button id="newGameButton" mnemonicParsing="false" onMouseClicked="#newGame" text="New game" GridPane.columnIndex="1">
          <HBox.margin>
