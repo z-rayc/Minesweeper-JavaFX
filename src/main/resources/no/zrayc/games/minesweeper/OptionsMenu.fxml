@@ -13,121 +13,114 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0"
+           xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="no.zrayc.games.minesweeper.OptionsMenuController">
   <panes>
     <TitledPane animated="false" text="Game options">
          <content>
             <ScrollPane prefHeight="200.0" prefWidth="200.0">
-               <content>
-                  <VBox prefWidth="300.0">
-                     <padding>
-                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
-                     </padding>
-                     <children>
-                        <VBox>
-                           <children>
-                              <HBox alignment="CENTER_LEFT">
-                                 <children>
-                                    <Label text="Tile size">
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <TextField prefWidth="60.0" />
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" top="5.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT">
-                                 <children>
-                                    <Label text="Width">
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <TextField prefWidth="60.0">
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </TextField>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" top="5.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT">
-                                 <children>
-                                    <Label text="Height">
-                                       <HBox.margin>
-                                          <Insets right="10.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <TextField prefWidth="60.0" />
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" top="5.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Separator prefWidth="200.0">
-                           <VBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </VBox.margin>
-                        </Separator>
-                        <Button mnemonicParsing="false" text="Save" />
-                     </children>
+               <VBox prefWidth="300.0">
+                  <padding>
+                     <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+                  </padding>
+                  <VBox>
+                     <HBox alignment="CENTER_LEFT">
+                        <VBox.margin>
+                           <Insets bottom="5.0" top="5.0"/>
+                        </VBox.margin>
+                        <Label text="Tile size">
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tileSizeInput" prefWidth="60.0"/>
+                     </HBox>
+                     <HBox alignment="CENTER_LEFT">
+                        <VBox.margin>
+                           <Insets bottom="5.0" top="5.0"/>
+                        </VBox.margin>
+                        <Label text="Width">
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="gridWidthInput" prefWidth="60.0">
+                           <HBox.margin>
+                              <Insets/>
+                           </HBox.margin>
+                        </TextField>
+                     </HBox>
+                     <HBox alignment="CENTER_LEFT">
+                        <VBox.margin>
+                           <Insets bottom="5.0" top="5.0"/>
+                        </VBox.margin>
+                        <Label text="Height">
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="gridHeightInput" prefWidth="60.0"/>
+                     </HBox>
+                     <HBox alignment="CENTER_LEFT">
+                        <VBox.margin>
+                           <Insets bottom="5.0" top="5.0"/>
+                        </VBox.margin>
+                        <Label text="Bombs">
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="totalBombsInput" prefWidth="60.0">
+                           <HBox.margin>
+                              <Insets/>
+                           </HBox.margin>
+                        </TextField>
+                     </HBox>
                   </VBox>
-               </content>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0"/>
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="gameOptionsApplyButton" onMouseClicked="#setTileAndGridOptions" mnemonicParsing="false" text="Apply"/>
+               </VBox>
             </ScrollPane>
          </content></TitledPane>
-    <TitledPane animated="false" text="Appearance">
-         <content>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0">
-               <content>
-                  <VBox prefWidth="300.0">
-                     <padding>
-                        <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
-                     </padding>
-                     <children>
-                        <VBox>
-                           <children>
-                              <HBox>
-                                 <children>
-                                    <RadioButton mnemonicParsing="false" text="Light Mode">
-                                       <HBox.margin>
-                                          <Insets bottom="5.0" top="5.0" />
-                                       </HBox.margin>
-                                       <padding>
-                                          <Insets bottom="5.0" top="5.0" />
-                                       </padding>
-                                       <toggleGroup>
-                                          <ToggleGroup fx:id="theme" />
-                                       </toggleGroup>
-                                    </RadioButton>
-                                 </children>
-                              </HBox>
-                              <HBox>
-                                 <children>
-                                    <RadioButton mnemonicParsing="false" text="Dark Mode" toggleGroup="$theme" />
-                                 </children>
-                              </HBox>
-                              <Separator prefWidth="200.0">
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </VBox.margin>
-                              </Separator>
-                              <Button mnemonicParsing="false" text="Save" />
-                           </children>
-                        </VBox>
-                     </children>
-                  </VBox>
-               </content>
-            </ScrollPane>
-         </content></TitledPane>
+     <TitledPane animated="false" text="Appearance">
+        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+           <VBox prefWidth="300.0">
+              <padding>
+                 <Insets bottom="10.0" left="30.0" right="30.0" top="10.0"/>
+              </padding>
+              <VBox>
+                 <HBox>
+                    <RadioButton mnemonicParsing="false" text="Light Mode">
+                       <HBox.margin>
+                          <Insets bottom="5.0" top="5.0"/>
+                       </HBox.margin>
+                       <padding>
+                          <Insets bottom="5.0" top="5.0"/>
+                       </padding>
+                       <toggleGroup>
+                          <ToggleGroup fx:id="theme"/>
+                       </toggleGroup>
+                    </RadioButton>
+                 </HBox>
+                 <HBox>
+                    <RadioButton mnemonicParsing="false" text="Dark Mode" toggleGroup="$theme"/>
+                 </HBox>
+                 <Separator prefWidth="200.0">
+                    <opaqueInsets>
+                       <Insets/>
+                    </opaqueInsets>
+                    <VBox.margin>
+                       <Insets bottom="10.0" top="10.0"/>
+                    </VBox.margin>
+                 </Separator>
+                 <Button fx:id="appearanceApplyButton" mnemonicParsing="false" text="Apply"/>
+              </VBox>
+           </VBox>
+        </ScrollPane>
+     </TitledPane>
   </panes>
 </Accordion>
