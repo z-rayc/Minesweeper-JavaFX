@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.text.Text?>
 <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0"
            xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="no.zrayc.games.minesweeper.OptionsMenuController">
   <panes>
@@ -83,10 +84,11 @@
                      </VBox.margin>
                   </Separator>
                   <Button fx:id="gameOptionsApplyButton" onMouseClicked="#setTileAndGridOptions" mnemonicParsing="false" text="Apply"/>
+                  <Text fx:id="gameOptionsApplyButtonText"></Text>
                </VBox>
             </ScrollPane>
          </content></TitledPane>
-     <TitledPane animated="false" text="Appearance">
+     <!-- <TitledPane animated="false" text="Appearance">
         <ScrollPane prefHeight="200.0" prefWidth="200.0">
            <VBox prefWidth="300.0">
               <padding>
@@ -121,6 +123,6 @@
               </VBox>
            </VBox>
         </ScrollPane>
-     </TitledPane>
+     </TitledPane> -->
   </panes>
 </Accordion>

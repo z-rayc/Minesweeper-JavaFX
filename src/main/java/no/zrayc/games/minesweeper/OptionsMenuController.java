@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -18,7 +19,8 @@ public class OptionsMenuController implements Initializable {
     @FXML private TextField totalBombsInput;
     
     @FXML private Button gameOptionsApplyButton;
-    @FXML private Button appearanceApplyButton;
+    @FXML private Text gameOptionsApplyButtonText;
+    /* @FXML private Button appearanceApplyButton; */
     
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -77,5 +79,11 @@ public class OptionsMenuController implements Initializable {
         
         int tileAmountY = Integer.parseInt(gridHeightInput.getText());
         MinesweeperGameController.setTileAmountY(tileAmountY);
+    
+        setGameOptionsApplyButtonText();
+    }
+    
+    private void setGameOptionsApplyButtonText() {
+        gameOptionsApplyButtonText.setText("Values updated. Create new game to see changes.");
     }
 }
