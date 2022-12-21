@@ -23,3 +23,5 @@ A minesweeper game made with JavaFX.
 - Escape: Open the options menu
 - N: Start a new game
   - Show alert to confirm
+  
+![Gameplay screenshot](https://github.com/z-rayc/Minesweeper-JavaFX/blob/main/Gameplay%20screenshot.png)
